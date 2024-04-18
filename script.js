@@ -5,7 +5,14 @@ for (i=1; i<=256; i++){
     let gridSquare = document.createElement("div");
     gridSquare.classList.add("square");
     gridContainer.append(gridSquare);
+    gridSquare.addEventListener("mouseover", function(e) {
+        e.target.style.backgroundColor = "#365571";
+    });
 };
+
+/*gridSquare.addEventListener("mouseover", function(e) {
+    e.target.style.backgroundColor = "#365571";
+});*/
 
 pixelButton.addEventListener("click", function() {
     let gridSize = Number(prompt("How many squares per side would you like your grid to have? Must be a number 1 - 100"));
@@ -28,6 +35,12 @@ function makeAGrid(gridSize){
             gridSquare.style.width = squareWidth;
             gridSquare.style.paddingBottom = squarePadBot;
             gridContainer.append(gridSquare);
+            gridSquare.addEventListener("mouseover", function(e) {
+                e.target.style.backgroundColor = "#365571";
+            });
         };
-    }
+    
+    
+    };
 };
+
